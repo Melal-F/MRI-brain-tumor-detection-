@@ -122,9 +122,6 @@ MRI-brain-tumor-detection/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Disclaimer
 
@@ -132,7 +129,7 @@ This application is designed to assist medical professionals and should not be u
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [Your GitHub](https://github.com/yourusername)
+- **MELAL FEYISA** - *Initial work* - [GitHub](https://github.com/Melal-F)
 
 ## 🙏 Acknowledgments
 
