@@ -12,9 +12,14 @@ from dateutil.parser import parse
 
 app = Flask(__name__)
 CORS(app)
+
+# Configuration
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
+UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', 'uploads')
+ALLOWED_EXTENSIONS = set(os.getenv('ALLOWED_EXTENSIONS', 'png,jpg,jpeg,dcm').split(','))
+
 model = YOLO("best.pt")
 
-UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'dcm'}
@@ -260,3 +265,5 @@ def delete_history(id):
 
 if __name__ == '__main__':
     app.run(debug=True) 
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
